@@ -1,0 +1,64 @@
+.judul {
+  text-align: center;
+  margin: 0;
+}
+
+.judul h1 {
+  margin: 0;
+  padding: 12px;
+  background-color: rgb(117, 111, 65);
+}
+.judul p {
+  margin: 0;
+  padding: 5px;
+  background-color: rgb(221, 219, 216);
+}
+
+/* body */
+body {
+  margin: 0;
+  background-color: rgb(247, 246, 243);
+}
+
+/* isi konten */
+.content {
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+/* profil char */
+.profile {
+  display: flex;
+  margin: 20px auto;
+  padding: 32px;
+  gap: 20px;
+  justify-content: center;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile ul {
+  list-style: none;
+}
+
+.sub-menu {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: rgb(221, 219, 216);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sub-menu h2 {
+  margin-bottom: 12px;
+  color: #2e3a3f;
+}
+
+.sub-menu p {
+  margin: 16px 0;
+  text-align: justify;
+}
+
+footer {
+  text-align: center;
+}

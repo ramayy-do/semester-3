@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style_07269.css" />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f4f6f5;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      header {
+        background: #2e8b57;
+        color: #fff;
+        text-align: center;
+        padding: 1rem 0;
+        position: sticky;
+        top: 0;
+      }
+
+      nav a {
+        color: #fff;
+        margin: 0 10px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        width: 85%;
+        max-width: 1100px;
+        margin: 2rem auto;
+      }
+
+      h2 {
+        text-align: center;
+        color: #2e8b57;
+      }
+
+      .profile-box {
+        display: flex;
+        align-items: center;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        gap: 20px;
+      }
+
+      .profile-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .produk-grid {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Website Produk</h1>
+      <nav>
+        <a href="#profile">Profile</a>
+        <a href="#produk">Produk</a>
+        <a href="#harga">Daftar Harga</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+    </header>
+
+    <section id="profile" class="container">
+      <h2>Profil Pembuat</h2>
+      <div class="profile-box">
+        <img src="img/me.jpg" alt="Foto Fatih" class="profile-img" />
+        <div class="profile-info">
+          <h3>Fatih</h3>
+          <p>
+            Saya mahasiswa yang sedang belajar membuat website menggunakan HTML,
+            CSS, dan JavaScript. Website ini adalah Project UTS saya untuk
+            menampilkan profil, produk, serta validasi form sederhana, pada mata
+            kuliah Pemrograman web dasar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="produk" class="container">
+      <h2>Produk yang Ditawarkan</h2>
+      <div class="produk-grid">
+        <div class="card">
+          <img src="img/1.jpg" alt="Kopi Arabika" />
+          <h3>Kopi Arabika</h3>
+          <p>Kopi pilihan dengan aroma kuat dan rasa khas.</p>
+          <p class="harga">Rp45.000</p>
+        </div>
+
+        <div class="card">
+          <img src="img/2.jpg" alt="Teh Hijau Premium" />
+          <h3>Teh Hijau Premium</h3>
+          <p>Teh alami segar dengan manfaat antioksidan tinggi.</p>
+          <p class="harga">Rp30.000</p>
+        </div>
+
+        <div class="card">
+          <img src="img/3.jpg" alt="Madu Hutan Asli" />
+          <h3>Madu Hutan Asli</h3>
+          <p>Madu murni tanpa campuran, langsung dari peternak.</p>
+          <p class="harga">Rp75.000</p>
+        </div>
+
+        <div class="card">
+          <img src="img/4.jpg" alt="Sabun Organik" />
+          <h3>Sabun Organik</h3>
+          <p>Sabun alami dari bahan herbal pilihan untuk kulit sehat.</p>
+          <p class="harga">Rp25.000</p>
+        </div>
+
+        <div class="card">
+          <img src="img/5.jpg" alt="Minyak Kelapa Murni" />
+          <h3>Minyak Kelapa Murni</h3>
+          <p>Minyak alami multifungsi untuk masak dan perawatan tubuh.</p>
+          <p class="harga">Rp60.000</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="harga" class="container">
+      <h2>Daftar Harga Produk</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama Produk</th>
+            <th>Deskripsi</th>
+            <th>Harga</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Kopi Arabika</td>
+            <td>Kopi dengan aroma khas</td>
+            <td>Rp45.000</td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>Teh Hijau Premium</td>
+            <td>Teh alami segar</td>
+            <td>Rp30.000</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Madu Hutan Asli</td>
+            <td>Madu murni tanpa campuran</td>
+            <td>Rp75.000</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Sabun Organik</td>
+            <td>Sabun dari bahan herbal</td>
+            <td>Rp25.000</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Minyak Kelapa Murni</td>
+            <td>Minyak alami multifungsi</td>
+            <td>Rp60.000</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="kontak" class="container">
+      <h2>Hubungi Saya</h2>
+      <form onsubmit="return validateForm()">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" />
+
+        <label for="kota">Kota:</label>
+        <input type="text" id="kota" name="kota" />
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" />
+
+        <label for="pesan">Pesan:</label>
+        <textarea id="pesan" name="pesan" rows="4"></textarea>
+
+        <button type="submit">Kirim</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Fatih | UTS Praktikum PWD</p>
+    </footer>
+
+    <script>
+      function validateForm() {
+        const nama = document.getElementById("nama").value.trim();
+        const kota = document.getElementById("kota").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const pesan = document.getElementById("pesan").value.trim();
+
+        const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (nama === "" || kota === "" || pesan === "") {
+          alert("Ada isian yang salah !");
+          return false;
+        }
+        if (!emailValid.test(email)) {
+          alert("Format email tidak valid!");
+          return false;
+        }
+        alert("Pesan berhasil dikirim !");
+        return true;
+      }
+    </script>
+  </body>
+</html>

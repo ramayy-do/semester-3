@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- css saya -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- logo title -->
+    <link rel="icon" href="img/logoMaido.png" alt="Logo Maido" width="500" />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f4f6f5;
+        color: #fff;
+        line-height: 1.6;
+        background: #000000;
+      }
+
+      /* === LIGHT THEME === */
+      body.light-theme {
+        background: #f4f6f5;
+        color: #000;
+      }
+
+      body.light-theme header {
+        background: #f4f6f5;
+        color: #d4af37;
+      }
+
+      body.light-theme nav a {
+        color: #000;
+      }
+
+      body.light-theme nav a:hover {
+        color: #d4af37;
+      }
+
+      body.light-theme .container {
+        background: #ffffff10; /* transparansi tipis supaya kontras */
+        color: #000;
+      }
+
+      body.light-theme footer {
+        color: #000;
+      }
+
+      header {
+        background: #000000;
+        color: #d4af37;
+        padding: 6px 40px;
+        position: sticky;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      /* fokus ke logo dan nama perusahaan */
+      .header-left {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .logo-img {
+        width: 60px;
+      }
+
+      .header-left h1 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 600;
+      }
+      /* akhir logo dan nama perusahaan */
+
+      /* fokus ke link a */
+      nav a {
+        margin-left: 25px; /*jarak antar link*/
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        position: relative; /*untuk efek underline */
+        transition: color 0.3s;
+      }
+      .nav a:hover {
+        color: #d4af37;
+      }
+      /* mempuat garis underline saat hover */
+      .nav a::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 0;
+        background: #d4af37;
+        transition: width 0.3s;
+        position: absolute;
+        bottom: -4px; /* posisi garis di bawah link */
+        left: 0;
+      }
+      .nav a:hover::after {
+        width: 100%; /* garis muncul penuh saat hover */
+      }
+      /* akhiran fokus link a */
+
+      .img-fluid {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .container {
+        margin: 2rem auto; /* auto kiri & kanan = center */
+        padding: 2rem;
+        display: flex;
+        align-items: center; /* semua konten horizontal center*/
+        justify-content: center; /* semua konten vertical center*/
+        max-width: 1250px;
+        border-radius: 8px;
+      }
+
+      .container h1 {
+        color: #d4af37;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+      }
+
+      footer {
+        text-align: center;
+      }
+    </style>
+
+    <title>Maido Barbershop - Tempat ternyaman untuk styling rambut anda</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <img
+          src="img/logoMaido.png"
+          alt="Logo Maido"
+          class="logo-img"
+          id="logoMaido"
+        />
+        <h1>Maido Barbershop</h1>
+      </div>
+      <nav class="nav">
+        <a href="#profile">Profile</a>
+        <a href="#Layanan">Layanan</a>
+        <a href="#Produk">Produk</a>
+        <a href="#kontak">Kontak</a>
+        <button
+          id="themeToggle"
+          class="btn btn-sm btn-outline-warning"
+          style="margin-left: 20px"
+        >
+          🌙 / ☀️
+        </button>
+      </nav>
+    </header>
+
+    <img
+      src="img/sikonBarbershop.png"
+      class="img-fluid"
+      alt="situasi dan kondisi barbershop"
+    />
+
+    <!-- section profile -->
+    <section id="profile" class="container">
+      <div class="profile-box">
+        <h1>What is Maido Barbershop?</h1>
+        <div class="profile-info">
+          <p>
+            Maido adalah sebuah brand yang terinspirasi dari nama owner kita
+            yaitu
+            <i>rama</i> atau biasa disebut <i>ramaido</i>. Hal tersebut mejadi
+            faktor utama dalam pengembangan ide-ide kami, dalam bahasa jawa
+            <i>maido</i> memiliki arti yaitu sering dikritik. Maido bergerak
+            dalam beberapa sektor bisnis, salah satunya yaitu bisnis barbershop
+            dan coffe shop.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- akhir section profile -->
+
+    <hr />
+
+    <!-- section kontak -->
+    <section id="kontak" class="container">
+      <form class="contact-box">
+        <h1>Hubungi Kami</h1>
+
+        <div class="mb-3">
+          <label for="exampleInputName" class="form-label">Name</label>
+          <input type="text" class="form-control" id="exampleInputName" />
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputCity" class="form-label">City</label>
+          <input type="text" class="form-control" id="exampleInputCity" />
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address</label
+          >
+          <input type="email" class="form-control" id="exampleInputEmail1" />
+        </div>
+
+        <label for="floatingTextarea2" class="form-label">Comments</label>
+        <div class="form-floating">
+          <textarea
+            class="form-control"
+            placeholder="Leave a comment here"
+            id="floatingTextarea2"
+            style="height: 100px"
+          ></textarea>
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+          <label class="form-check-label" for="exampleCheck1"
+            >Anda yakin dengan kami</label
+          >
+        </div>
+        <button type="submit" class="btn btn-warning">Submit</button>
+      </form>
+    </section>
+    <!-- akhir section kontak -->
+
+    <footer>
+      <hr />
+      <p>&copy; 2025 Maido Project | Pertemuan 7 PBW</p>
+    </footer>
+
+    <!-- javascript saya-->
+    <script>
+      // DARK / LIGHT THEME TOGGLE
+      const toggleBtn = document.getElementById("themeToggle");
+      const body = document.body;
+      const logo = document.getElementById("logoMaido");
+
+      // Fungsi untuk update tema + logo + localStorage
+      function updateTheme(isLight) {
+        if (isLight) {
+          body.classList.add("light-theme");
+          logo.src = "img/logoGold.png";
+          localStorage.setItem("theme", "light");
+        } else {
+          body.classList.remove("light-theme");
+          logo.src = "img/logoMaido.png";
+          localStorage.setItem("theme", "dark");
+        }
+      }
+
+      // Load theme dari localStorage saat halaman dibuka
+      if (localStorage.getItem("theme") === "light") {
+        updateTheme(true);
+      } else {
+        updateTheme(false);
+      }
+
+      // Toggle theme ketika tombol diklik
+      toggleBtn.addEventListener("click", () => {
+        const isLight = !body.classList.contains("light-theme");
+        updateTheme(isLight);
+      });
+    </script>
+  </body>
+</html>
