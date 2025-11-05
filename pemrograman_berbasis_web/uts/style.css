@@ -1,0 +1,122 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f5;
+  color: #fff;
+  line-height: 1.6;
+  background: #000000;
+}
+
+/* === LIGHT THEME === */
+body.light-theme {
+  background: #f4f6f5;
+  color: #000;
+}
+
+body.light-theme header {
+  background: #f4f6f5;
+  color: #d4af37;
+}
+
+body.light-theme nav a {
+  color: #000;
+}
+
+body.light-theme nav a:hover {
+  color: #d4af37;
+}
+
+body.light-theme .container {
+  background: #ffffff10; /* transparansi tipis supaya kontras */
+  color: #000;
+}
+
+body.light-theme footer {
+  color: #000;
+}
+
+header {
+  background: #000000;
+  color: #d4af37;
+  padding: 6px 40px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* fokus ke logo dan nama perusahaan */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-img {
+  width: 60px;
+}
+
+.header-left h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+/* akhir logo dan nama perusahaan */
+
+/* fokus ke link a */
+nav a {
+  margin-left: 25px; /*jarak antar link*/
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative; /*untuk efek underline */
+  transition: color 0.3s;
+}
+.nav a:hover {
+  color: #d4af37;
+}
+/* mempuat garis underline saat hover */
+.nav a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #d4af37;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -4px; /* posisi garis di bawah link */
+  left: 0;
+}
+.nav a:hover::after {
+  width: 100%; /* garis muncul penuh saat hover */
+}
+/* akhiran fokus link a */
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  margin: 2rem auto; /* auto kiri & kanan = center */
+  padding: 2rem;
+  display: flex;
+  align-items: center; /* semua konten horizontal center*/
+  justify-content: center; /* semua konten vertical center*/
+  max-width: 1250px;
+  border-radius: 8px;
+}
+
+.container h1 {
+  color: #d4af37;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+footer {
+  text-align: center;
+}
